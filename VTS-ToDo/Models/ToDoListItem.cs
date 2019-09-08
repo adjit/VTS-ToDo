@@ -17,6 +17,6 @@ namespace ToDo.Models
         public bool IsComplete { get; set; }
 
         //Foreign Key
-        public int ToDoListId { get; set; }
+        public long ToDoListId { get; set; }
     }
 }

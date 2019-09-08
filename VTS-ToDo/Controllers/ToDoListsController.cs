@@ -22,7 +22,7 @@ namespace ToDo.Controllers
 
         // GET: api/ToDoLists
         [HttpGet]
-        public async Task<IEnumerable<ToDoList>> GetToDoList()
+        public async Task<ActionResult<IEnumerable<ToDoList>>> GetToDoList()
         {
             return await _context.ToDoList
                             .Include(a => a.ToDoListItems)
@@ -31,7 +31,7 @@ namespace ToDo.Controllers
 
         // GET: api/ToDoLists/5
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetToDoList([FromRoute] long id)
+        public async Task<ActionResult<ToDoList>> GetToDoList([FromRoute] long id)
         {
             if (!ModelState.IsValid)
             {
