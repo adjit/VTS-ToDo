@@ -9,14 +9,15 @@ namespace ToDo.Models
 {
     public class ToDoListItem
     {
+        [Required]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long Id { get; set; }
-        [Required]
         public string ToDoItem { get; set; }
         public string Description { get; set; }
         public bool IsComplete { get; set; }
 
         //Foreign Key
+        [Required]
         public long ToDoListId { get; set; }
     }
 }

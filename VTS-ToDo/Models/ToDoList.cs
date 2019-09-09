@@ -14,9 +14,9 @@ namespace ToDo.Models
             ToDoListItems = new HashSet<ToDoListItem>();
         }
 
+        [Required]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long Id { get; set; }
-        [Required]
         public string ToDoListName { get; set; }
         public string ToDoListDescription { get; set; }
 
